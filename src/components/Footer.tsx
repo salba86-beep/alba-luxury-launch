@@ -22,8 +22,8 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-accent-foreground/70 leading-relaxed">
-              London's premier property management company, specialising in
-              premium Airbnb conversions for discerning landlords.
+              Chester's premier property management company, specialising in
+              premium Airbnb conversions for landlords across Cheshire, North West and North Wales.
             </p>
           </motion.div>
 
@@ -79,16 +79,16 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary" />
                 <a
-                  href="tel:+442012345678"
+                  href="tel:+441234567890"
                   className="text-accent-foreground/70 hover:text-primary transition-colors"
                 >
-                  +44 20 1234 5678
+                  +44 1234 567890
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary mt-1" />
                 <span className="text-accent-foreground/70">
-                  London, United Kingdom
+                  Chester, Cheshire, United Kingdom
                 </span>
               </li>
             </ul>
