@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import albaLogo from "@/assets/alba-logo.png";
 
 const Header = () => {
   return (
@@ -9,14 +10,13 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <div className="flex items-center gap-2">
-            <span className="font-heading text-xl md:text-2xl font-bold text-foreground tracking-tight">
-              ALBA
-            </span>
-            <span className="hidden sm:inline text-muted-foreground text-sm font-medium tracking-wide">
-              Property Management
-            </span>
-          </div>
+          <a href="#" className="flex items-center">
+            <img 
+              src={albaLogo} 
+              alt="Alba Property Management" 
+              className="h-12 md:h-14 w-auto"
+            />
+          </a>
 
           <nav className="hidden md:flex items-center gap-8">
             <a
