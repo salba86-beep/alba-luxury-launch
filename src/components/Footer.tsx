@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
+import albaLogo from "@/assets/alba-logo.png";
 
 const Footer = () => {
   return (
@@ -14,12 +15,11 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="mb-4">
-              <span className="font-heading text-2xl font-bold text-accent-foreground">
-                ALBA
-              </span>
-              <span className="text-accent-foreground/60 text-sm ml-2">
-                Property Management
-              </span>
+              <img 
+                src={albaLogo} 
+                alt="Alba Property Management" 
+                className="h-16 w-auto"
+              />
             </div>
             <p className="text-accent-foreground/70 leading-relaxed">
               Chester's premier property management company, specialising in
