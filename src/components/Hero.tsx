@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import LeadForm from "./LeadForm";
 import heroImage from "@/assets/hero-property.jpg";
+import albaLogo from "@/assets/alba-logo.png";
 
 const Hero = () => {
   return (
@@ -14,6 +15,20 @@ const Hero = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-accent/95 via-accent/85 to-accent/70" />
       </div>
+
+      {/* Centered Background Logo */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 0.08, scale: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="absolute inset-0 z-[1] flex items-center justify-center pointer-events-none"
+      >
+        <img
+          src={albaLogo}
+          alt=""
+          className="w-[60%] max-w-2xl h-auto opacity-100"
+        />
+      </motion.div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 lg:py-28">
