@@ -4,7 +4,7 @@ import { Home, ArrowRight, PoundSterling, Sparkles } from "lucide-react";
 const steps = [
   {
     icon: Home,
-    title: "London Landlords",
+    title: "Regional Landlords",
     description: "With underperforming AST properties seeking better returns",
   },
   {
@@ -37,7 +37,7 @@ const TheOffer = () => {
             The <span className="text-primary">3S Formula</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We help London landlords with underperforming properties earn more by
+            We help landlords across Chester, Cheshire, North West and North Wales with underperforming properties earn more by
             converting them into premium Airbnbs—without tenant hassle.
           </p>
         </motion.div>

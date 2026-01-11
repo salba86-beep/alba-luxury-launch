@@ -25,7 +25,7 @@ const AboutUs = () => {
               About Us
             </span>
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              London's Premier Property
+              Chester's Premier Property
               <br />
               <span className="text-primary">Management Experts</span>
             </h2>
@@ -74,14 +74,14 @@ const AboutUs = () => {
           >
             <div className="max-w-3xl mx-auto text-center">
               <h3 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-4">
-                Why London Landlords Trust Alba
+                Why Landlords Across Chester & North West Trust Alba
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 We understand that your property is more than an investment—it's your
                 financial future. That's why we've built Alba on a foundation of
                 transparency, expertise, and an unwavering commitment to maximising your
                 returns while protecting your asset. Our team combines decades of
-                hospitality excellence with deep knowledge of London's short-let
+                hospitality excellence with deep knowledge of the region's short-let
                 regulations, ensuring your property thrives in the competitive Airbnb
                 market.
               </p>
