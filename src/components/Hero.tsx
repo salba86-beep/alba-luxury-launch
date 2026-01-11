@@ -43,12 +43,6 @@ const Hero = () => {
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-primary rounded-full" />
                 <span className="text-accent-foreground/70 text-sm">
-                  No upfront costs
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-primary rounded-full" />
-                <span className="text-accent-foreground/70 text-sm">
                   Fully managed
                 </span>
               </div>
