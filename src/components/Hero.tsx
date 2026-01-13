@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import LeadForm from "./LeadForm";
-import heroImage from "@/assets/hero-property.jpg";
-import albaLogo from "@/assets/alba-logo.png";
+import heroImage from "@/assets/hero-background.jpg";
+import sasaLogo from "@/assets/sasa-logo.png";
 
 const Hero = () => {
   return (
@@ -24,7 +24,7 @@ const Hero = () => {
         className="absolute inset-0 z-[1] flex items-center justify-center pointer-events-none"
       >
         <img
-          src={albaLogo}
+          src={sasaLogo}
           alt=""
           className="w-[60%] max-w-2xl h-auto opacity-100"
         />
