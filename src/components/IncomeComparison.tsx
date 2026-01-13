@@ -13,12 +13,31 @@ const IncomeComparison = () => {
           className="text-center mb-10"
         >
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
-            Normal AST vs Doing Short Lets
+            Short-Term Vs Longer Lets
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Below is an example income comparison from doing a Traditional AST/Long Let vs doing Short Lets/Airbnb. 
-            See the example data below based on a 2 Bedroom Apt Rented at £1200 market rate.
-          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="max-w-4xl mx-auto mb-10"
+        >
+          <div className="text-muted-foreground space-y-4 leading-relaxed">
+            <p>
+              The North West and North Wales remain a strong short-term market. A mix of leisure and business demand, beautiful countryside, and vibrant cities attracts millions of visitors and contractors each year.
+            </p>
+            <p>
+              A well-managed two-bed can achieve around 65–70% occupancy, generating £20k+ in annual revenue.
+            </p>
+            <p>
+              Although Short Let is often viewed as seasonal, this region is highly resilient. Spring and summer bring demand for gardens lovers, races, hikers, and coastal trips, while autumn and winter are supported by changing landscapes and popular Christmas markets.
+            </p>
+            <p>
+              Ongoing development across the region also drives steady contractor demand, making the North West and North Wales not just great places to visit, but strong, year-round investment opportunities.
+            </p>
+          </div>
         </motion.div>
 
         <motion.div
@@ -28,6 +47,10 @@ const IncomeComparison = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-4xl mx-auto"
         >
+          <p className="text-foreground mb-6 text-center">
+            The example below, is a comparison from a Traditional Let Vs Short Let / Airbnb. The data reflected are based on 2 bedroom house/apt. in Chester Area rented for £1,200.00 pm.
+          </p>
+
           {/* Comparison Table */}
           <div className="overflow-x-auto rounded-xl shadow-luxury border border-border/50">
             <table className="w-full">
@@ -35,13 +58,13 @@ const IncomeComparison = () => {
               <thead>
                 <tr>
                   <th className="bg-primary text-primary-foreground font-heading font-semibold px-6 py-4 text-left">
-                    Comparison Table
+                    
                   </th>
                   <th className="bg-muted text-foreground font-heading font-semibold px-6 py-4 text-center">
-                    Typical AST
+                    Traditional Let
                   </th>
-                  <th className="bg-primary text-primary-foreground font-heading font-semibold px-6 py-4 text-center">
-                    Short Lets / Airbnb
+                  <th className="bg-accent text-accent-foreground font-heading font-semibold px-6 py-4 text-center">
+                    Short Let / Airbnb
                   </th>
                 </tr>
               </thead>
@@ -49,61 +72,52 @@ const IncomeComparison = () => {
                 {/* Monthly Income */}
                 <tr>
                   <td className="bg-primary/90 text-primary-foreground font-medium px-6 py-3">
-                    Monthly Income from Rent
+                    Monthly income from Rent
                   </td>
                   <td className="bg-muted/50 text-foreground text-center px-6 py-3 font-medium">
-                    £1,200
+                    £1,200.00
                   </td>
-                  <td className="bg-primary/10 text-foreground text-center px-6 py-3 font-medium">
-                    £2,650
+                  <td className="bg-accent/20 text-foreground text-center px-6 py-3 font-medium">
+                    £2,340.00
                   </td>
                 </tr>
 
-                {/* Monthly Expenses Header */}
-                <tr>
-                  <td className="bg-primary text-primary-foreground font-semibold px-6 py-3">
-                    MONTHLY EXPENSES
-                  </td>
-                  <td className="bg-accent text-accent-foreground px-6 py-3"></td>
-                  <td className="bg-primary/20 px-6 py-3"></td>
-                </tr>
-
-                {/* Mortgage */}
+                {/* Monthly Expenses */}
                 <tr>
                   <td className="bg-primary/90 text-primary-foreground px-6 py-3">
-                    Mortgage
+                    Monthly expenses (i.e. Mortgage)
                   </td>
                   <td className="bg-muted/50 text-foreground text-center px-6 py-3">
-                    £650
+                    £600.00
                   </td>
-                  <td className="bg-primary/10 text-foreground text-center px-6 py-3">
-                    £650
+                  <td className="bg-accent/20 text-foreground text-center px-6 py-3">
+                    £600.00
                   </td>
                 </tr>
 
-                {/* Agent Management Fees */}
+                {/* Agent Fees */}
                 <tr>
                   <td className="bg-primary/90 text-primary-foreground px-6 py-3">
-                    Agent Management Fee's
+                    Agent Fee's
                   </td>
                   <td className="bg-muted/50 text-foreground text-center px-6 py-3">
-                    £120 at 10%
+                    £120.00 (10%)
                   </td>
-                  <td className="bg-primary/10 text-foreground text-center px-6 py-3">
-                    £397.50 at 15%
+                  <td className="bg-accent/20 text-foreground text-center px-6 py-3">
+                    £315.90 (13.5%)
                   </td>
                 </tr>
 
-                {/* Total After Expenses */}
+                {/* Total Monthly Net Income */}
                 <tr>
                   <td className="bg-primary text-primary-foreground font-semibold px-6 py-4">
-                    TOTAL AFTER EXPENSES
+                    Total monthly Net income
+                  </td>
+                  <td className="bg-muted text-foreground text-center px-6 py-4 font-bold text-lg">
+                    £480.00
                   </td>
                   <td className="bg-accent text-accent-foreground text-center px-6 py-4 font-bold text-lg">
-                    £430
-                  </td>
-                  <td className="bg-primary text-primary-foreground text-center px-6 py-4 font-bold text-lg">
-                    £1,602.50
+                    £1,424.10
                   </td>
                 </tr>
               </tbody>
@@ -118,7 +132,7 @@ const IncomeComparison = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-muted-foreground italic text-center mt-6 text-sm"
           >
-            Note: The income comparison above is an example & the Agent Fees are based on the current Letting Agent Prices in the UK.
+            Note: The income comparison above is an example & the Agent Fees are based on the current fee offer.
           </motion.p>
 
           {/* CTA Button */}

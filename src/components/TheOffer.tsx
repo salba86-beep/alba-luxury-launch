@@ -83,13 +83,41 @@ const TheOffer = () => {
           </div>
         </div>
 
+        {/* Special Offer */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="mt-12 max-w-3xl mx-auto"
+        >
+          <div className="bg-gradient-to-br from-primary to-primary/80 rounded-xl p-8 md:p-10 shadow-luxury text-primary-foreground text-center">
+            <h3 className="font-heading text-2xl md:text-3xl font-bold mb-4">
+              Special Launch Offer
+            </h3>
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <span className="text-4xl md:text-5xl font-bold line-through opacity-60">15%</span>
+              <span className="text-5xl md:text-6xl font-bold text-accent">13.5%</span>
+            </div>
+            <p className="text-lg md:text-xl font-medium mb-2">
+              Management Fee <span className="font-bold">Locked for One Year</span>
+            </p>
+            <div className="mt-6 inline-flex items-center gap-3 bg-primary-foreground/10 rounded-full px-6 py-3">
+              <span className="text-2xl">🔐</span>
+              <span className="font-heading font-semibold">
+                Welcome Pack: Smart Lock Included
+              </span>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Benefits List */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 max-w-4xl mx-auto"
+          className="mt-12 max-w-4xl mx-auto"
         >
           <div className="bg-card rounded-xl p-8 md:p-10 shadow-luxury border border-border/50">
             <h3 className="font-heading text-xl md:text-2xl font-bold text-foreground text-center mb-8">
