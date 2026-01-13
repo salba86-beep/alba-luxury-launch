@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
-import albaLogo from "@/assets/alba-logo.png";
+import sasaLogo from "@/assets/sasa-logo.png";
 
 const Footer = () => {
   return (
@@ -16,8 +16,8 @@ const Footer = () => {
           >
             <div className="mb-4">
               <img 
-                src={albaLogo} 
-                alt="Alba Property Management" 
+                src={sasaLogo} 
+                alt="SASA Property Management" 
                 className="h-16 w-auto"
               />
             </div>
@@ -70,10 +70,10 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary" />
                 <a
-                  href="mailto:hello@albaproperties.co.uk"
+                  href="mailto:hello@sasapropertymanagement.co.uk"
                   className="text-accent-foreground/70 hover:text-primary transition-colors"
                 >
-                  hello@albaproperties.co.uk
+                  hello@sasapropertymanagement.co.uk
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -99,7 +99,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-accent-foreground/10">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-accent-foreground/50">
-              © {new Date().getFullYear()} Alba Property Management. All rights
+              © {new Date().getFullYear()} SASA Property Management. All rights
               reserved.
             </p>
             <div className="flex items-center gap-6">
