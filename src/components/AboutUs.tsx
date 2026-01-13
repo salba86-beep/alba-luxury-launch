@@ -25,14 +25,12 @@ const AboutUs = () => {
               About Us
             </span>
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Chester's Premier Property
+              Young, Driven &
               <br />
-              <span className="text-primary">Management Experts</span>
+              <span className="text-primary">Determined</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              With over 40 years of combined hospitality and property management
-              experience, we transform underperforming rental properties into
-              premium short-let investments.
+              We are a young, driven, and determined company with several years of experience in project management across multiple industries. This background has equipped us with the skills needed to deliver excellent customer service and reliable support.
             </p>
           </motion.div>
 
@@ -74,16 +72,10 @@ const AboutUs = () => {
           >
             <div className="max-w-3xl mx-auto text-center">
               <h3 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-4">
-                Why Landlords Across Chester & North West Trust Alba
+                Expertise Through Collaboration
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                We understand that your property is more than an investment—it's your
-                financial future. That's why we've built Alba on a foundation of
-                transparency, expertise, and an unwavering commitment to maximising your
-                returns while protecting your asset. Our team combines decades of
-                hospitality excellence with deep knowledge of the region's short-let
-                regulations, ensuring your property thrives in the competitive Airbnb
-                market.
+                We work closely with other industry experts to stay up to date with best practices, continually sharing knowledge and supporting one another. Through our strong professional network and mentorship from an established company that manages over 50 properties, we offer reassurance, stability, control, and trust.
               </p>
             </div>
           </motion.div>
