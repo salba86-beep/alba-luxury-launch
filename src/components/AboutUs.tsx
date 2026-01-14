@@ -3,7 +3,7 @@ import { Award, Users, TrendingUp, Shield } from "lucide-react";
 
 const stats = [
   { icon: Award, value: "40+", label: "Years Combined Experience" },
-  { icon: Users, value: "500+", label: "Properties Managed" },
+  { icon: Users, value: "1", label: "Properties Managed" },
   { icon: TrendingUp, value: "2.5x", label: "Average Income Increase" },
   { icon: Shield, value: "100%", label: "Compliance Rate" },
 ];
