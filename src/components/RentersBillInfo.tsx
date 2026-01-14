@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import hmGovernmentLogo from "@/assets/hm-government-logo.png";
 
 const challenges = [
   {
