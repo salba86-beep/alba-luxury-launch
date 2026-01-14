@@ -83,11 +83,11 @@ const EasySteps = () => {
                   </div>
 
                   {/* Step Content */}
-                  <div className="bg-card rounded-xl p-6 shadow-luxury border border-border/50 h-full">
+                  <div className="bg-card rounded-xl p-6 shadow-luxury border border-border/50 flex flex-col min-h-[180px]">
                     <h3 className="font-heading text-lg font-bold text-foreground mb-3">
                       {step.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
+                    <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
                       {step.description}
                     </p>
                   </div>
