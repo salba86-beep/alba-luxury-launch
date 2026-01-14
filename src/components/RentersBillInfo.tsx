@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import hmGovernmentLogo from "@/assets/hm-government-logo.png";
 
 const challenges = [
   {
@@ -46,13 +47,11 @@ const RentersBillInfo = () => {
           <div className="p-8 md:p-12">
             {/* HM Government header */}
             <div className="flex items-center gap-4 mb-6">
-              <div className="text-foreground">
-                <svg className="w-16 h-16" viewBox="0 0 100 100" fill="currentColor">
-                  <path d="M50 5C25.1 5 5 25.1 5 50s20.1 45 45 45 45-20.1 45-45S74.9 5 50 5zm0 85c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/>
-                  <path d="M50 20c-16.5 0-30 13.5-30 30s13.5 30 30 30 30-13.5 30-30-13.5-30-30-30zm0 55c-13.8 0-25-11.2-25-25s11.2-25 25-25 25 11.2 25 25-11.2 25-25 25z"/>
-                  <circle cx="50" cy="50" r="15"/>
-                </svg>
-              </div>
+              <img 
+                src={hmGovernmentLogo} 
+                alt="HM Government" 
+                className="w-16 h-auto"
+              />
               <div>
                 <span className="text-2xl md:text-3xl font-heading font-bold text-foreground">
                   HM Government
