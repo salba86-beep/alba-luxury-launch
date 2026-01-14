@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Award, Users, TrendingUp, Shield } from "lucide-react";
 
 const stats = [
-  { icon: Award, value: "40+", label: "Years Combined Experience" },
+  { icon: Award, value: "100%", label: "Commitment, Attention and Love as if it's our own property" },
   { icon: Users, value: "1", label: "We are your only point contact. We deal with everything!" },
   { icon: TrendingUp, value: "2.5x", label: "Average Income Increase" },
   { icon: Shield, value: "100%", label: "Compliance Rate" },
