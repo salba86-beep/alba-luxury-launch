@@ -47,16 +47,12 @@ const RentersBillInfo = () => {
           <div className="p-8 md:p-12">
             {/* HM Government header */}
             <div className="flex items-center gap-4 mb-6">
+              <div className="w-1 h-16 bg-accent rounded-full" />
               <img 
                 src={hmGovernmentLogo} 
                 alt="HM Government" 
-                className="w-16 h-auto"
+                className="h-16 w-auto"
               />
-              <div>
-                <span className="text-2xl md:text-3xl font-heading font-bold text-foreground">
-                  HM Government
-                </span>
-              </div>
             </div>
 
             <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
