@@ -45,7 +45,7 @@ const RiskReversal = () => {
                 {[
                   "Zero risk to try",
                   "Performance-based fees",
-                  "No long-term contracts",
+                  "Hassle Free",
                 ].map((point, index) => (
                   <motion.div
                     key={point}
