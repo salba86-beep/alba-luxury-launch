@@ -4,18 +4,18 @@ import { Home, Building2, Briefcase } from "lucide-react";
 const categories = [
   {
     icon: Home,
-    title: "Single Homeowners",
-    description: "Own a property that's sitting empty or underperforming? We'll transform it into a profitable short-let generating premium returns.",
+    title: "Accidental Landlord",
+    description: "Inherited a property or relocated unexpectedly? We'll help you turn your unplanned asset into a high-earning short-let without the hassle.",
   },
   {
     icon: Building2,
-    title: "Second Homeowners",
-    description: "Holiday home not being used year-round? Let us manage it as a high-earning Airbnb while you enjoy it when you want.",
+    title: "Buy-to-Let Investor",
+    description: "Looking to maximise returns on your investment property? Let us convert it into a premium Airbnb that outperforms traditional rentals.",
   },
   {
     icon: Briefcase,
-    title: "Developers & Portfolio Holders",
-    description: "Multiple properties or new developments? We offer tailored solutions to maximise returns across your entire portfolio.",
+    title: "Developers",
+    description: "New builds or renovation projects? We offer tailored solutions to launch and manage your properties as profitable short-lets from day one.",
   },
 ];
 
