@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Upload, X } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const LeadForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -12,7 +19,12 @@ const LeadForm = () => {
     email: "",
     phone: "",
     postcode: "",
+    beds: "",
+    bathrooms: "",
   });
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,6 +37,33 @@ const LeadForm = () => {
       ...prev,
       [e.target.name]: e.target.value,
     }));
+  };
+
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setSelectedImage(file);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImagePreview(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const removeImage = () => {
+    setSelectedImage(null);
+    setImagePreview(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
   };
 
   if (isSubmitted) {
@@ -69,7 +108,7 @@ const LeadForm = () => {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <Label htmlFor="name" className="text-foreground font-medium">
-            Full Name
+            Full Name <span className="text-destructive">*</span>
           </Label>
           <Input
             id="name"
@@ -85,7 +124,7 @@ const LeadForm = () => {
 
         <div>
           <Label htmlFor="email" className="text-foreground font-medium">
-            Email Address
+            Email Address <span className="text-destructive">*</span>
           </Label>
           <Input
             id="email"
@@ -101,7 +140,7 @@ const LeadForm = () => {
 
         <div>
           <Label htmlFor="phone" className="text-foreground font-medium">
-            Phone Number
+            Phone Number <span className="text-destructive">*</span>
           </Label>
           <Input
             id="phone"
@@ -117,7 +156,7 @@ const LeadForm = () => {
 
         <div>
           <Label htmlFor="postcode" className="text-foreground font-medium">
-            Property Postcode
+            Property Postcode <span className="text-destructive">*</span>
           </Label>
           <Input
             id="postcode"
@@ -129,6 +168,93 @@ const LeadForm = () => {
             onChange={handleChange}
             className="mt-1.5 bg-background border-border focus:ring-primary focus:border-primary"
           />
+        </div>
+
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <Label htmlFor="beds" className="text-foreground font-medium">
+              Number of Beds <span className="text-destructive">*</span>
+            </Label>
+            <Select
+              value={formData.beds}
+              onValueChange={(value) => handleSelectChange("beds", value)}
+              required
+            >
+              <SelectTrigger className="mt-1.5 bg-background border-border">
+                <SelectValue placeholder="Select beds" />
+              </SelectTrigger>
+              <SelectContent className="bg-background border-border z-50">
+                {[...Array(10)].map((_, i) => (
+                  <SelectItem key={i + 1} value={String(i + 1)}>
+                    {i + 1}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div>
+            <Label htmlFor="bathrooms" className="text-foreground font-medium">
+              Number of Bathrooms <span className="text-destructive">*</span>
+            </Label>
+            <Select
+              value={formData.bathrooms}
+              onValueChange={(value) => handleSelectChange("bathrooms", value)}
+              required
+            >
+              <SelectTrigger className="mt-1.5 bg-background border-border">
+                <SelectValue placeholder="Select bathrooms" />
+              </SelectTrigger>
+              <SelectContent className="bg-background border-border z-50">
+                {[...Array(10)].map((_, i) => (
+                  <SelectItem key={i + 1} value={String(i + 1)}>
+                    {i + 1}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+
+        <div>
+          <Label className="text-foreground font-medium">
+            Property Photo <span className="text-destructive">*</span>
+          </Label>
+          <div className="mt-1.5">
+            {imagePreview ? (
+              <div className="relative">
+                <img
+                  src={imagePreview}
+                  alt="Property preview"
+                  className="w-full h-32 object-cover rounded-lg border border-border"
+                />
+                <button
+                  type="button"
+                  onClick={removeImage}
+                  className="absolute top-2 right-2 bg-destructive text-destructive-foreground rounded-full p-1 hover:bg-destructive/80 transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+            ) : (
+              <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-border rounded-lg cursor-pointer bg-background hover:bg-muted/50 transition-colors">
+                <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                  <Upload className="w-8 h-8 text-muted-foreground mb-2" />
+                  <p className="text-sm text-muted-foreground">
+                    Click to upload property photo
+                  </p>
+                </div>
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageChange}
+                  className="hidden"
+                  required
+                />
+              </label>
+            )}
+          </div>
         </div>
 
         <Button
