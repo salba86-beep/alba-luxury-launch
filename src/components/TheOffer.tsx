@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Home, ArrowRight, PoundSterling, Sparkles, Clock, Gift, AlertTriangle } from "lucide-react";
+import { Home, ArrowRight, PoundSterling, Sparkles, Clock, Gift, Star } from "lucide-react";
 import smartLockImage from "@/assets/smart-lock.jpg";
 
 const steps = [
@@ -92,21 +92,7 @@ const TheOffer = () => {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="mt-12 max-w-5xl mx-auto"
         >
-          {/* Urgency Banner */}
-          <motion.div 
-            initial={{ scale: 0.95 }}
-            animate={{ scale: [0.95, 1.02, 1] }}
-            transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 3 }}
-            className="bg-destructive text-destructive-foreground rounded-t-xl px-6 py-3 flex items-center justify-center gap-3"
-          >
-            <AlertTriangle className="w-5 h-5 animate-pulse" />
-            <span className="font-heading font-bold text-sm md:text-base">
-              🔥 LIMITED OFFER: Only for the FIRST 10 Customers! 🔥
-            </span>
-            <AlertTriangle className="w-5 h-5 animate-pulse" />
-          </motion.div>
-
-          <div className="bg-gradient-to-br from-primary via-primary to-primary/90 rounded-b-xl overflow-hidden shadow-luxury-lg">
+          <div className="bg-gradient-to-br from-primary via-primary to-primary/90 rounded-xl overflow-hidden shadow-luxury-lg">
             <div className="grid md:grid-cols-2 gap-0">
               {/* Left - Offer Details */}
               <div className="p-8 md:p-10 text-primary-foreground">
@@ -127,17 +113,18 @@ const TheOffer = () => {
                 </div>
                 
                 <p className="text-lg md:text-xl font-medium mb-6">
-                  Management Fee <span className="font-bold underline decoration-accent decoration-2">Locked for One Year</span>
+                  Management Fee{" "}
+                  <span className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-3 py-1 rounded-full font-bold text-base">
+                    <Star className="w-4 h-4" />
+                    Locked for One Year
+                    <Star className="w-4 h-4" />
+                  </span>
                 </p>
 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-3 bg-primary-foreground/10 rounded-lg px-4 py-2">
                     <Clock className="w-5 h-5 text-accent" />
-                    <span className="font-medium">Act Now – Spots Filling Fast!</span>
-                  </div>
-                  <div className="flex items-center gap-3 bg-primary-foreground/10 rounded-lg px-4 py-2">
-                    <span className="text-xl">✓</span>
-                    <span className="font-medium">No setup fees</span>
+                    <span className="font-medium">Limited to First 10 Customers Only</span>
                   </div>
                   <div className="flex items-center gap-3 bg-primary-foreground/10 rounded-lg px-4 py-2">
                     <span className="text-xl">✓</span>
