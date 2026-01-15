@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Home, ArrowRight, PoundSterling, Sparkles } from "lucide-react";
+import { Home, ArrowRight, PoundSterling, Sparkles, Clock, Gift, AlertTriangle } from "lucide-react";
+import smartLockImage from "@/assets/smart-lock.jpg";
 
 const steps = [
   {
@@ -89,24 +90,98 @@ const TheOffer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="mt-12 max-w-3xl mx-auto"
+          className="mt-12 max-w-5xl mx-auto"
         >
-          <div className="bg-gradient-to-br from-primary to-primary/80 rounded-xl p-8 md:p-10 shadow-luxury text-primary-foreground text-center">
-            <h3 className="font-heading text-2xl md:text-3xl font-bold mb-4">
-              Special Launch Offer
-            </h3>
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <span className="text-4xl md:text-5xl font-bold line-through opacity-60">15%</span>
-              <span className="text-5xl md:text-6xl font-bold text-accent">13.5%</span>
+          {/* Urgency Banner */}
+          <motion.div 
+            initial={{ scale: 0.95 }}
+            animate={{ scale: [0.95, 1.02, 1] }}
+            transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 3 }}
+            className="bg-destructive text-destructive-foreground rounded-t-xl px-6 py-3 flex items-center justify-center gap-3"
+          >
+            <AlertTriangle className="w-5 h-5 animate-pulse" />
+            <span className="font-heading font-bold text-sm md:text-base">
+              🔥 LIMITED OFFER: Only for the FIRST 10 Customers! 🔥
+            </span>
+            <AlertTriangle className="w-5 h-5 animate-pulse" />
+          </motion.div>
+
+          <div className="bg-gradient-to-br from-primary via-primary to-primary/90 rounded-b-xl overflow-hidden shadow-luxury-lg">
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Left - Offer Details */}
+              <div className="p-8 md:p-10 text-primary-foreground">
+                <div className="flex items-center gap-2 mb-4">
+                  <Gift className="w-6 h-6 text-accent" />
+                  <span className="font-heading text-sm font-bold uppercase tracking-wider text-accent">
+                    Exclusive Launch Offer
+                  </span>
+                </div>
+                
+                <h3 className="font-heading text-3xl md:text-4xl font-bold mb-6">
+                  Special Launch Offer
+                </h3>
+                
+                <div className="flex items-baseline gap-4 mb-4">
+                  <span className="text-4xl md:text-5xl font-bold line-through opacity-50">15%</span>
+                  <span className="text-6xl md:text-7xl font-bold text-accent drop-shadow-lg">13.5%</span>
+                </div>
+                
+                <p className="text-lg md:text-xl font-medium mb-6">
+                  Management Fee <span className="font-bold underline decoration-accent decoration-2">Locked for One Year</span>
+                </p>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-3 bg-primary-foreground/10 rounded-lg px-4 py-2">
+                    <Clock className="w-5 h-5 text-accent" />
+                    <span className="font-medium">Act Now – Spots Filling Fast!</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-primary-foreground/10 rounded-lg px-4 py-2">
+                    <span className="text-xl">✓</span>
+                    <span className="font-medium">No setup fees</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-primary-foreground/10 rounded-lg px-4 py-2">
+                    <span className="text-xl">✓</span>
+                    <span className="font-medium">Cancel anytime</span>
+                  </div>
+                </div>
+
+                <div className="bg-accent text-accent-foreground rounded-xl px-6 py-4 inline-flex items-center gap-3 shadow-lg">
+                  <span className="text-3xl">🔐</span>
+                  <div>
+                    <span className="font-heading font-bold text-lg block">
+                      FREE Welcome Pack
+                    </span>
+                    <span className="text-sm opacity-90">Premium Smart Lock Included (Worth £150)</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right - Smart Lock Image */}
+              <div className="relative hidden md:block">
+                <img 
+                  src={smartLockImage} 
+                  alt="Person using smart lock" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-transparent" />
+                <div className="absolute bottom-6 right-6 bg-accent text-accent-foreground rounded-full px-4 py-2 font-heading font-bold shadow-lg animate-bounce">
+                  FREE!
+                </div>
+              </div>
             </div>
-            <p className="text-lg md:text-xl font-medium mb-2">
-              Management Fee <span className="font-bold">Locked for One Year</span>
-            </p>
-            <div className="mt-6 inline-flex items-center gap-3 bg-primary-foreground/10 rounded-full px-6 py-3">
-              <span className="text-2xl">🔐</span>
-              <span className="font-heading font-semibold">
-                Welcome Pack: Smart Lock Included
-              </span>
+          </div>
+
+          {/* Mobile Image */}
+          <div className="md:hidden mt-4">
+            <div className="relative rounded-xl overflow-hidden">
+              <img 
+                src={smartLockImage} 
+                alt="Person using smart lock" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute bottom-4 right-4 bg-accent text-accent-foreground rounded-full px-4 py-2 font-heading font-bold shadow-lg">
+                FREE Smart Lock!
+              </div>
             </div>
           </div>
         </motion.div>
