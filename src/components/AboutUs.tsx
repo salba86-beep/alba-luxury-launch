@@ -1,26 +1,38 @@
 import { motion } from "framer-motion";
 import { Award, Users, TrendingUp, Shield } from "lucide-react";
-
-const stats = [
-  { icon: Award, value: "100%", label: "Commitment, Attention and Love as if it's our own property" },
-  { icon: Users, value: "One Call", label: "Single point of contact. We handle everything for you!" },
-  { icon: TrendingUp, value: "2.5x", label: "Average Income Increase" },
-  { icon: Shield, value: "100%", label: "Compliance Rate" },
-];
-
+const stats = [{
+  icon: Award,
+  value: "100%",
+  label: "Commitment, Attention and Love as if it's our own property"
+}, {
+  icon: Users,
+  value: "1",
+  label: "We are your only point contact. We deal with everything!"
+}, {
+  icon: TrendingUp,
+  value: "2.5x",
+  label: "Average Income Increase"
+}, {
+  icon: Shield,
+  value: "100%",
+  label: "Compliance Rate"
+}];
 const AboutUs = () => {
-  return (
-    <section id="about" className="section-padding bg-background">
+  return <section id="about" className="section-padding bg-background opacity-85">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12 md:mb-16"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5
+        }} className="text-center mb-12 md:mb-16">
             <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
               About Us
             </span>
@@ -35,22 +47,30 @@ const AboutUs = () => {
           </motion.div>
 
           {/* Stats Grid */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.1 * index }}
-                className="bg-card rounded-lg p-6 text-center shadow-luxury border border-border/50 hover:shadow-luxury-lg transition-shadow duration-300"
-              >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.6,
+          delay: 0.2
+        }} className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {stats.map((stat, index) => <motion.div key={stat.label} initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.4,
+            delay: 0.1 * index
+          }} className="bg-card rounded-lg p-6 text-center shadow-luxury border border-border/50 hover:shadow-luxury-lg transition-shadow duration-300">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4">
                   <stat.icon className="w-6 h-6 text-primary" />
                 </div>
@@ -58,18 +78,22 @@ const AboutUs = () => {
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </motion.div>
 
           {/* Content Block */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-12 md:mt-16 bg-cream rounded-xl p-8 md:p-12"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.6,
+          delay: 0.4
+        }} className="mt-12 md:mt-16 bg-cream rounded-xl p-8 md:p-12">
             <div className="max-w-3xl mx-auto text-center">
               <h3 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-4">
                 Expertise Through Collaboration
@@ -81,8 +105,6 @@ const AboutUs = () => {
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutUs;
