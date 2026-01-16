@@ -67,7 +67,7 @@ const RentersBillInfo = () => {
             }} transition={{
               duration: 0.4,
               delay: 0.1 * index
-            }} className="flex gap-4">
+            }} className="flex gap-4 bg-muted">
                   <div className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-primary flex items-center justify-center">
                     <span className="text-primary font-heading font-semibold">
                       {item.number}
