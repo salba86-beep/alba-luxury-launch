@@ -1,40 +1,36 @@
 import { motion } from "framer-motion";
 import { TrendingUp, Clock, Shield, Smile } from "lucide-react";
-
-const reasons = [
-  {
-    icon: TrendingUp,
-    title: "Higher Income",
-    description: "Earn 2-3x more than traditional AST rentals with dynamic pricing and premium guests.",
-  },
-  {
-    icon: Clock,
-    title: "Flexibility",
-    description: "Use your property whenever you want. Block dates for personal use with ease.",
-  },
-  {
-    icon: Shield,
-    title: "Less Risk",
-    description: "No long-term tenant issues, property damage disputes, or eviction nightmares.",
-  },
-  {
-    icon: Smile,
-    title: "Hassle-Free",
-    description: "We handle everything from guest communication to cleaning and maintenance.",
-  },
-];
-
+const reasons = [{
+  icon: TrendingUp,
+  title: "Higher Income",
+  description: "Earn 2-3x more than traditional AST rentals with dynamic pricing and premium guests."
+}, {
+  icon: Clock,
+  title: "Flexibility",
+  description: "Use your property whenever you want. Block dates for personal use with ease."
+}, {
+  icon: Shield,
+  title: "Less Risk",
+  description: "No long-term tenant issues, property damage disputes, or eviction nightmares."
+}, {
+  icon: Smile,
+  title: "Hassle-Free",
+  description: "We handle everything from guest communication to cleaning and maintenance."
+}];
 const WhySwitch = () => {
-  return (
-    <section className="section-padding bg-accent">
+  return <section className="section-padding bg-accent opacity-70">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12 md:mb-16"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.5
+      }} className="text-center mb-12 md:mb-16">
           <span className="inline-block px-3 py-1 bg-primary/20 text-primary text-sm font-medium rounded-full mb-4">
             The Smart Choice
           </span>
@@ -48,15 +44,18 @@ const WhySwitch = () => {
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {reasons.map((reason, index) => (
-            <motion.div
-              key={reason.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="bg-card rounded-xl p-6 text-center shadow-luxury border border-border/50 hover:shadow-luxury-lg transition-all duration-300"
-            >
+          {reasons.map((reason, index) => <motion.div key={reason.title} initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.1 * index
+        }} className="bg-card rounded-xl p-6 text-center shadow-luxury border border-border/50 hover:shadow-luxury-lg transition-all duration-300">
               <div className="inline-flex items-center justify-center w-14 h-14 bg-primary rounded-full mb-4 shadow-gold">
                 <reason.icon className="w-7 h-7 text-primary-foreground" />
               </div>
@@ -66,12 +65,9 @@ const WhySwitch = () => {
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {reason.description}
               </p>
-            </motion.div>
-          ))}
+            </motion.div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhySwitch;
