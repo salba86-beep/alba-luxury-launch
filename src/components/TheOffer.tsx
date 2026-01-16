@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { Home, ArrowRight, PoundSterling, Sparkles, Clock, Gift, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import smartLockImage from "@/assets/smart-lock.jpg";
+
+const scrollToForm = () => {
+  document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
+};
 
 const steps = [
   {
@@ -132,7 +137,7 @@ const TheOffer = () => {
                   </div>
                 </div>
 
-                <div className="bg-accent text-accent-foreground rounded-xl px-6 py-4 inline-flex items-center gap-3 shadow-lg">
+                <div className="bg-accent text-accent-foreground rounded-xl px-6 py-4 inline-flex items-center gap-3 shadow-lg mb-6">
                   <span className="text-3xl">🔐</span>
                   <div>
                     <span className="font-heading font-bold text-lg block">
@@ -141,6 +146,15 @@ const TheOffer = () => {
                     <span className="text-sm opacity-90">Premium Smart Lock Included (Worth £150)</span>
                   </div>
                 </div>
+
+                <Button 
+                  onClick={scrollToForm}
+                  size="lg"
+                  className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground font-heading font-bold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+                >
+                  Claim This Offer
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
               </div>
 
               {/* Right - Smart Lock Image */}
