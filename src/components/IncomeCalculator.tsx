@@ -98,7 +98,7 @@ const IncomeCalculator = () => {
         once: true
       }} transition={{
         duration: 0.6
-      }} className="text-center mb-12 bg-secondary">
+      }} className="text-center mb-12">
           <span className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Calculator className="w-4 h-4" />
             Income Estimator
