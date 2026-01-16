@@ -4,6 +4,7 @@ import ServiceCategories from "@/components/ServiceCategories";
 import IncomeComparison from "@/components/IncomeComparison";
 import WhySwitch from "@/components/WhySwitch";
 import RentersBillInfo from "@/components/RentersBillInfo";
+import IncomeCalculator from "@/components/IncomeCalculator";
 import TheOffer from "@/components/TheOffer";
 import EasySteps from "@/components/EasySteps";
 import RiskReversal from "@/components/RiskReversal";
@@ -30,6 +31,7 @@ const Index = () => {
         <IncomeComparison />
         <WhySwitch />
         <RentersBillInfo />
+        <IncomeCalculator />
         <TheOffer />
         <EasySteps />
         <RiskReversal />
