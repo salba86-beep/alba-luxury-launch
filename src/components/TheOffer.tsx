@@ -32,10 +32,10 @@ const TheOffer = () => {
           className="text-center mb-12 md:mb-16"
         >
           <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
-            Our Service
+            How It Works
           </span>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            The <span className="text-primary">3S Formula</span>
+            Your Path to <span className="text-primary">Higher Returns</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We help landlords across Chester, Cheshire, North West and North Wales with underperforming properties earn more by
