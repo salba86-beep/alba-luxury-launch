@@ -35,7 +35,7 @@ const RentersBillInfo = () => {
         once: true
       }} transition={{
         duration: 0.5
-      }} className="max-w-4xl mx-auto bg-background rounded-xl shadow-luxury border border-border/50 overflow-hidden">
+      }} className="max-w-4xl mx-auto bg-background rounded-xl shadow-luxury border overflow-hidden border-secondary-foreground">
           {/* Top bar accent */}
           <div className="h-2 bg-accent" />
           
