@@ -1,29 +1,36 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-
 const IncomeComparison = () => {
-  return (
-    <section className="section-padding bg-background">
+  return <section className="section-padding bg-background opacity-85">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-10"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.5
+      }} className="text-center mb-10">
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
             Short-Term Vs Longer Lets
           </h2>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-4xl mx-auto mb-10"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 30
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6,
+        delay: 0.1
+      }} className="max-w-4xl mx-auto mb-10">
           <div className="text-muted-foreground space-y-4 leading-relaxed">
             <p>
               The North West and North Wales remain a strong short-term market. A mix of leisure and business demand, beautiful countryside, and vibrant cities attracts millions of visitors and contractors each year.
@@ -40,13 +47,18 @@ const IncomeComparison = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-4xl mx-auto"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 30
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6,
+        delay: 0.2
+      }} className="max-w-4xl mx-auto">
           <p className="text-foreground mb-6 text-center">
             The example below, is a comparison from a Traditional Let Vs Short Let / Airbnb. The data reflected are based on 2 bedroom house/apt. in Chester Area rented for £1,200.00 pm.
           </p>
@@ -125,36 +137,38 @@ const IncomeComparison = () => {
           </div>
 
           {/* Note */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-muted-foreground italic text-center mt-6 text-sm"
-          >
+          <motion.p initial={{
+          opacity: 0
+        }} whileInView={{
+          opacity: 1
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.4
+        }} className="text-muted-foreground italic text-center mt-6 text-sm">
             Note: The income comparison above is an example & the Agent Fees are based on the current fee offer.
           </motion.p>
 
           {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-center mt-8"
-          >
-            <Button
-              asChild
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-heading font-semibold px-8 py-6 text-lg"
-            >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.5
+        }} className="text-center mt-8">
+            <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-heading font-semibold px-8 py-6 text-lg">
               <a href="#valuation">Get Started Here</a>
             </Button>
           </motion.div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default IncomeComparison;
