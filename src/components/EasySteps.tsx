@@ -1,50 +1,45 @@
 import { motion } from "framer-motion";
 import { Phone, ClipboardCheck, Camera, Globe, Banknote } from "lucide-react";
-
-const steps = [
-  {
-    icon: Phone,
-    number: 1,
-    title: "Schedule a Call",
-    description: "Book a free consultation to discuss your property and goals. We'll assess your potential earnings.",
-  },
-  {
-    icon: ClipboardCheck,
-    number: 2,
-    title: "Property Assessment",
-    description: "We visit your property to evaluate its short-let potential and create a tailored strategy.",
-  },
-  {
-    icon: Camera,
-    number: 3,
-    title: "Professional Setup",
-    description: "Our team handles professional photography, staging advice, and creates compelling listings.",
-  },
-  {
-    icon: Globe,
-    number: 4,
-    title: "Go Live",
-    description: "Your property goes live on Airbnb, Booking.com, and other platforms for maximum exposure.",
-  },
-  {
-    icon: Banknote,
-    number: 5,
-    title: "Start Earning",
-    description: "Sit back and watch the bookings roll in. We handle everything—you just collect the income.",
-  },
-];
-
+const steps = [{
+  icon: Phone,
+  number: 1,
+  title: "Schedule a Call",
+  description: "Book a free consultation to discuss your property and goals. We'll assess your potential earnings."
+}, {
+  icon: ClipboardCheck,
+  number: 2,
+  title: "Property Assessment",
+  description: "We visit your property to evaluate its short-let potential and create a tailored strategy."
+}, {
+  icon: Camera,
+  number: 3,
+  title: "Professional Setup",
+  description: "Our team handles professional photography, staging advice, and creates compelling listings."
+}, {
+  icon: Globe,
+  number: 4,
+  title: "Go Live",
+  description: "Your property goes live on Airbnb, Booking.com, and other platforms for maximum exposure."
+}, {
+  icon: Banknote,
+  number: 5,
+  title: "Start Earning",
+  description: "Sit back and watch the bookings roll in. We handle everything—you just collect the income."
+}];
 const EasySteps = () => {
-  return (
-    <section className="section-padding bg-cream">
+  return <section className="section-padding bg-cream opacity-85">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12 md:mb-16"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.5
+      }} className="text-center mb-12 md:mb-16">
           <span className="inline-block px-4 py-2 bg-primary text-primary-foreground text-sm font-bold rounded-full mb-6">
             HOW IT WORKS
           </span>
@@ -63,15 +58,18 @@ const EasySteps = () => {
             <div className="hidden lg:block absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20" />
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4">
-              {steps.map((step, index) => (
-                <motion.div
-                  key={step.number}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 * index }}
-                  className="relative text-center"
-                >
+              {steps.map((step, index) => <motion.div key={step.number} initial={{
+              opacity: 0,
+              y: 30
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true
+            }} transition={{
+              duration: 0.5,
+              delay: 0.1 * index
+            }} className="relative text-center">
                   {/* Step Circle */}
                   <div className="relative z-10 mx-auto mb-6">
                     <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center shadow-gold mx-auto">
@@ -93,47 +91,34 @@ const EasySteps = () => {
                   </div>
 
                   {/* Arrow for mobile/tablet */}
-                  {index < steps.length - 1 && (
-                    <div className="flex justify-center lg:hidden my-4">
-                      <svg
-                        className="w-6 h-6 text-primary rotate-90 md:rotate-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        />
+                  {index < steps.length - 1 && <div className="flex justify-center lg:hidden my-4">
+                      <svg className="w-6 h-6 text-primary rotate-90 md:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
-                    </div>
-                  )}
-                </motion.div>
-              ))}
+                    </div>}
+                </motion.div>)}
             </div>
           </div>
         </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="text-center mt-12"
-        >
-          <a
-            href="#valuation"
-            className="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-gold-dark text-primary-foreground font-heading font-semibold text-lg rounded-lg transition-all duration-300 shadow-gold hover:shadow-lg"
-          >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.5,
+        delay: 0.6
+      }} className="text-center mt-12">
+          <a href="#valuation" className="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-gold-dark text-primary-foreground font-heading font-semibold text-lg rounded-lg transition-all duration-300 shadow-gold hover:shadow-lg">
             Start Your Journey Today
           </a>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default EasySteps;
