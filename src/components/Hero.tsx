@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import LeadForm from "./LeadForm";
-import heroImage from "@/assets/hero-background-new.jpg";
+import heroImage from "@/assets/hero-background.jpg";
 import salbaLogo from "@/assets/salba-logo-gold.png";
 const Hero = () => {
   return <section id="valuation" className="relative min-h-screen pt-20 md:pt-24">
