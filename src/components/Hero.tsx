@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import LeadForm from "./LeadForm";
-import heroImage from "@/assets/hero-background.jpg";
-import sasaLogo from "@/assets/sasa-logo.png";
+import heroImage from "@/assets/hero-background-new.jpg";
+import salbaLogo from "@/assets/salba-logo-gold.png";
 const Hero = () => {
   return <section id="valuation" className="relative min-h-screen pt-20 md:pt-24">
       {/* Background Image with Overlay */}
@@ -21,7 +21,7 @@ const Hero = () => {
       duration: 1,
       ease: "easeOut"
     }} className="absolute inset-0 z-[1] flex items-center justify-center pointer-events-none">
-        <img src={sasaLogo} alt="" className="w-[60%] max-w-2xl h-auto opacity-100" />
+        <img src={salbaLogo} alt="" className="w-[60%] max-w-2xl h-auto opacity-100" />
       </motion.div>
 
       {/* Content */}
