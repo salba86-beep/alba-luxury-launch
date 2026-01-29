@@ -21,7 +21,7 @@ const Footer = () => {
               <img src={sasaLogo} alt="SASA Property Management" className="h-16 w-auto" />
             </div>
             <p className="text-accent-foreground/70 leading-relaxed">
-              SA SA Property Management company, specialising in premium Airbnb conversions for landlords across Cheshire, North West, North Wales and beyond.
+              Salba Property Management company, specialising in premium Airbnb conversions for landlords across Cheshire, North West, North Wales and beyond.
             </p>
           </motion.div>
 
@@ -81,14 +81,14 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:hello@sasapropertymanagement.co.uk" className="text-accent-foreground/70 hover:text-primary transition-colors">
-                  hello@sasapropertymanagement.co.uk
+                <a href="mailto:info@salbaproperty.com" className="text-accent-foreground/70 hover:text-primary transition-colors">
+                  info@salbaproperty.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary" />
-                <a href="tel:+441234567890" className="text-accent-foreground/70 hover:text-primary transition-colors">
-                  +44 1234 567890
+                <a href="tel:+447702049334" className="text-accent-foreground/70 hover:text-primary transition-colors">
+                  +44 7702 049334
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -105,7 +105,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-accent-foreground/10">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-accent-foreground/50">
-              © {new Date().getFullYear()} SASA Property Management. All rights
+              © {new Date().getFullYear()} Salba Property Management. All rights
               reserved.
             </p>
             <div className="flex items-center gap-6">
