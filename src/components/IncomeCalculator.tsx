@@ -130,7 +130,7 @@ const IncomeCalculator = () => {
             <div className="p-6 md:p-8 bg-gradient-to-br from-primary/5 via-transparent to-accent/5">
               <div className="grid md:grid-cols-2 gap-6">
 
-                {/* Monthly Income (stacked like annual, gold color matches annual card) */}
+                {/* Monthly Income (stacked like annual, gold color fixed with !important) */}
                 <motion.div
                   key={`${selectedArea}-${selectedBedrooms}-monthly`}
                   whileHover={{ scale: 1.03, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
@@ -139,17 +139,17 @@ const IncomeCalculator = () => {
                   transition={{ duration: 0.3 }}
                   className="bg-card rounded-xl p-6 border border-border shadow-lg cursor-pointer"
                 >
-                  <div className="flex items-center justify-between mb-4" style={{ color: "#FFD700" }}>
-                    <span className="text-sm font-medium">Monthly Income</span>
-                    <PoundSterling className="w-5 h-5" style={{ color: "#FFD700" }} />
+                  <div className="flex items-center justify-between mb-4" style={{ color: "#FFD700 !important" }}>
+                    <span className="text-sm font-medium" style={{ color: "#FFD700 !important" }}>Monthly Income</span>
+                    <PoundSterling className="w-5 h-5" style={{ color: "#FFD700 !important" }} />
                   </div>
-                  <div className="flex flex-col gap-1 text-4xl md:text-5xl font-heading font-bold" style={{ color: "#FFD700" }}>
+                  <div className="flex flex-col gap-1 text-4xl md:text-5xl font-heading font-bold" style={{ color: "#FFD700 !important" }}>
                     <span>£{currentData.monthly[0].toLocaleString()}</span>
                     <span>–</span>
                     <span>£{currentData.monthly[1].toLocaleString()}</span>
-                    <span className="text-sm font-normal" style={{ color: "#FFD700" }}>/month</span>
+                    <span className="text-sm font-normal" style={{ color: "#FFD700 !important" }}>/month</span>
                   </div>
-                  <p className="text-sm mt-2" style={{ color: "#FFD700" }}>
+                  <p className="text-sm mt-2" style={{ color: "#FFD700 !important" }}>
                     Potential monthly revenue based on local market data
                   </p>
                 </motion.div>
