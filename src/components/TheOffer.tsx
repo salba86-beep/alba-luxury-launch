@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Home, ArrowRight, PoundSterling, Sparkles, Clock, Gift, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import smartLockImage from "@/assets/security-camera.jpg";
+import SecurityCameraImage from "@/assets/security-camera.jpg";
 
 const scrollToForm = () => {
   document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
