@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Home, ArrowRight, PoundSterling, Sparkles, Clock, Gift, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import smartLockImage from "@/assets/smart-lock.jpg";
+import smartLockImage from "@/assets/security-camera.jpg";
 
 const scrollToForm = () => {
   document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
@@ -143,7 +143,7 @@ const TheOffer = () => {
                     <span className="font-heading font-bold text-lg block">
                       FREE Welcome Pack
                     </span>
-                    <span className="text-sm opacity-90">Premium Smart Lock Included (Worth £150)</span>
+                    <span className="text-sm opacity-90">CCTV Camera for Peace of Mind Included (Worth £150)</span>
                   </div>
                 </div>
 
@@ -157,11 +157,11 @@ const TheOffer = () => {
                 </Button>
               </div>
 
-              {/* Right - Smart Lock Image */}
+              {/* Right -Security Camera Image */}
               <div className="relative hidden md:block">
                 <img 
-                  src={smartLockImage} 
-                  alt="Person using smart lock" 
+                  src={SecurityCameraImage} 
+                  alt="Security Camera" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-transparent" />
@@ -177,11 +177,11 @@ const TheOffer = () => {
             <div className="relative rounded-xl overflow-hidden">
               <img 
                 src={smartLockImage} 
-                alt="Person using smart lock" 
+                alt="Security Camera" 
                 className="w-full h-48 object-cover"
               />
               <div className="absolute bottom-4 right-4 bg-accent text-accent-foreground rounded-full px-4 py-2 font-heading font-bold shadow-lg">
-                FREE Smart Lock!
+                FREE CCTV Security Camera!
               </div>
             </div>
           </div>
