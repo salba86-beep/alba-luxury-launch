@@ -75,6 +75,16 @@ const IncomeCalculator = () => {
         >
           <div className="bg-card rounded-2xl shadow-luxury-lg border border-border overflow-hidden">
 
+            {/* Title & Description */}
+            <div className="p-6 md:p-8 border-b border-border bg-muted/30 text-center">
+              <h2 className="font-heading text-2xl md:text-3xl font-bold mb-2 inline-block px-3 py-1 rounded bg-white/20 backdrop-blur-sm">
+                See Your <span className="text-primary">Earning Potential</span>
+              </h2>
+              <p className="text-muted-foreground text-sm md:text-lg mt-2 inline-block px-2 py-1 rounded bg-white/10 backdrop-blur-sm">
+                Select your area and property size to see estimated short-term rental income
+              </p>
+            </div>
+
             {/* Selection Tabs */}
             <div className="p-6 md:p-8 border-b border-border bg-muted/30">
 
@@ -130,7 +140,7 @@ const IncomeCalculator = () => {
             <div className="p-6 md:p-8 bg-gradient-to-br from-primary/5 via-transparent to-accent/5">
               <div className="grid md:grid-cols-2 gap-6">
 
-                {/* Monthly Income (stacked like annual, gold color fixed with !important) */}
+                {/* Monthly Income */}
                 <motion.div
                   key={`${selectedArea}-${selectedBedrooms}-monthly`}
                   whileHover={{ scale: 1.03, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
@@ -143,18 +153,18 @@ const IncomeCalculator = () => {
                     <span className="text-sm font-medium" style={{ color: "#FFD700 !important" }}>Monthly Income</span>
                     <PoundSterling className="w-5 h-5" style={{ color: "#FFD700 !important" }} />
                   </div>
-                  <div className="flex flex-col gap-1 text-4xl md:text-5xl font-heading font-bold" style={{ color: "#FFD700 !important" }}>
+                  <div className="flex flex-col gap-1 text-4xl md:text-5xl font-heading font-bold" style={{ color: "#FFD700 !important", textShadow: "1px 1px 4px rgba(0,0,0,0.5)" }}>
                     <span>£{currentData.monthly[0].toLocaleString()}</span>
                     <span>–</span>
                     <span>£{currentData.monthly[1].toLocaleString()}</span>
-                    <span className="text-sm font-normal" style={{ color: "#FFD700 !important" }}>/month</span>
+                    <span className="text-sm font-normal" style={{ color: "#FFD700 !important" }}/>/month
                   </div>
                   <p className="text-sm mt-2" style={{ color: "#FFD700 !important" }}>
                     Potential monthly revenue based on local market data
                   </p>
                 </motion.div>
 
-                {/* Annual Income (stacked) */}
+                {/* Annual Income */}
                 <motion.div
                   key={`${selectedArea}-${selectedBedrooms}-annual`}
                   whileHover={{ scale: 1.03, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
@@ -197,8 +207,7 @@ const IncomeCalculator = () => {
                       heroSection.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
-                  className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg
-                             hover:ring-2 hover:ring-gold hover:ring-offset-1 hover:ring-offset-background"
+                  className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:ring-2 hover:ring-gold hover:ring-offset-1 hover:ring-offset-background"
                 >
                   Get Your Estimate Now
                   <TrendingUp className="w-4 h-4" />
