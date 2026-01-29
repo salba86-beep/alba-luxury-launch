@@ -56,11 +56,11 @@ const IncomeCalculator = () => {
             Income Estimator
           </span>
 
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 inline-block px-3 py-1 rounded bg-white/20 backdrop-blur-sm">
             Turn Your Property into a <span className="text-primary">High-Earning Short-Term Rental</span>
           </h2>
 
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto inline-block px-2 py-1 rounded bg-white/10 backdrop-blur-sm">
             Select your area and property size to see your potential short-term rental revenue. Typical 2-bedroom apartments in Chester & Cheshire can earn <strong>£26,000–£30,000 per year</strong>.
           </p>
         </motion.div>
@@ -74,16 +74,6 @@ const IncomeCalculator = () => {
           className="max-w-4xl mx-auto"
         >
           <div className="bg-card rounded-2xl shadow-luxury-lg border border-border overflow-hidden">
-
-            {/* Title & Description */}
-            <div className="p-6 md:p-8 border-b border-border bg-muted/30 text-center">
-              <h2 className="font-heading text-2xl md:text-3xl font-bold mb-2 inline-block px-3 py-1 rounded bg-white/20 backdrop-blur-sm">
-                See Your <span className="text-primary">Earning Potential</span>
-              </h2>
-              <p className="text-muted-foreground text-sm md:text-lg mt-2 inline-block px-2 py-1 rounded bg-white/10 backdrop-blur-sm">
-                Select your area and property size to see estimated short-term rental income
-              </p>
-            </div>
 
             {/* Selection Tabs */}
             <div className="p-6 md:p-8 border-b border-border bg-muted/30">
@@ -149,17 +139,17 @@ const IncomeCalculator = () => {
                   transition={{ duration: 0.3 }}
                   className="bg-card rounded-xl p-6 border border-border shadow-lg cursor-pointer"
                 >
-                  <div className="flex items-center justify-between mb-4" style={{ color: "#FFD700 !important" }}>
-                    <span className="text-sm font-medium" style={{ color: "#FFD700 !important" }}>Monthly Income</span>
-                    <PoundSterling className="w-5 h-5" style={{ color: "#FFD700 !important" }} />
+                  <div className="flex items-center justify-between mb-4 text-yellow-400">
+                    <span className="text-sm font-medium text-yellow-400">Monthly Income</span>
+                    <PoundSterling className="w-5 h-5 text-yellow-400" />
                   </div>
-                  <div className="flex flex-col gap-1 text-4xl md:text-5xl font-heading font-bold" style={{ color: "#FFD700 !important", textShadow: "1px 1px 4px rgba(0,0,0,0.5)" }}>
+                  <div className="flex flex-col gap-1 text-4xl md:text-5xl font-heading font-bold text-yellow-400">
                     <span>£{currentData.monthly[0].toLocaleString()}</span>
                     <span>–</span>
                     <span>£{currentData.monthly[1].toLocaleString()}</span>
-                    <span className="text-sm font-normal" style={{ color: "#FFD700 !important" }}/>/month
+                    <span className="text-sm font-normal text-yellow-400">/month</span>
                   </div>
-                  <p className="text-sm mt-2" style={{ color: "#FFD700 !important" }}>
+                  <p className="text-sm mt-2 text-yellow-400">
                     Potential monthly revenue based on local market data
                   </p>
                 </motion.div>
@@ -177,7 +167,7 @@ const IncomeCalculator = () => {
                     <span className="text-sm font-medium">Annual Revenue</span>
                     <TrendingUp className="w-5 h-5 text-accent" />
                   </div>
-                  <div className="flex flex-col gap-1 text-4xl md:text-5xl font-heading font-bold">
+                  <div className="flex flex-col gap-1 text-4xl md:text-5xl font-heading font-bold text-white">
                     <span>£{currentData.annual[0].toLocaleString()}</span>
                     <span>–</span>
                     <span>£{currentData.annual[1].toLocaleString()}</span>
@@ -207,7 +197,8 @@ const IncomeCalculator = () => {
                       heroSection.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
-                  className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:ring-2 hover:ring-gold hover:ring-offset-1 hover:ring-offset-background"
+                  className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg
+                             hover:ring-2 hover:ring-gold hover:ring-offset-1 hover:ring-offset-background"
                 >
                   Get Your Estimate Now
                   <TrendingUp className="w-4 h-4" />
