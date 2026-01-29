@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
-import sasaLogo from "@/assets/sasa-logo.png";
+import albaLogo from "@/assets/alba-logo.png";
 const Footer = () => {
   return <footer className="bg-accent text-accent-foreground">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
