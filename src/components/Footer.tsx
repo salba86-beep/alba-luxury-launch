@@ -18,7 +18,7 @@ const Footer = () => {
           duration: 0.5
         }}>
             <div className="mb-4">
-              <img src={albaLogo} alt="SASA Property Management" className="h-16 w-auto" />
+              <img src={albaLogo} alt="Salba Property Management" className="h-16 w-auto" />
             </div>
             <p className="text-accent-foreground/70 leading-relaxed">
               Salba Property Management company, specialising in premium Airbnb conversions for landlords across Cheshire, North West, North Wales and beyond.
