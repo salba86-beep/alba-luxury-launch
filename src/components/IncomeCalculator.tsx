@@ -173,7 +173,7 @@ const IncomeCalculator = () => {
                     <span>£{currentData.annual[1].toLocaleString()}</span>
                     <span className="text-sm font-normal text-white/70">/year</span>
                   </div>
-                  <p className="text-white/70 text-xs mt-2">
+                  <p className="text-white/70 text-sm mt-2">
                     Potential annual earnings with short-term lets
                   </p>
                 </motion.div>
