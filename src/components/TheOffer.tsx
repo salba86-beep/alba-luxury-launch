@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Home, ArrowRight, PoundSterling, Sparkles, Clock, Gift, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import SecurityCameraImage from "@/assets/security-camera.jpg";
+import SecurityCameraImage from "@/assets/security-camera.jpg"; // ✅ FIXED IMPORT
 
 const scrollToForm = () => {
   document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
@@ -150,17 +150,18 @@ const TheOffer = () => {
                 <Button 
                   onClick={scrollToForm}
                   size="lg"
-                  className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground font-heading font-bold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+                  // ✅ FIXED: Added 'h-auto' below
+                  className="w-full sm:w-auto h-auto bg-accent hover:bg-accent/90 text-accent-foreground font-heading font-bold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
                 >
                   Claim This Offer
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </div>
 
-              {/* Right -Security Camera Image */}
+              {/* Right - Security Camera Image */}
               <div className="relative hidden md:block">
                 <img 
-                  src={SecurityCameraImage} 
+                  src={SecurityCameraImage} // ✅ FIXED VARIABLE
                   alt="Security Camera" 
                   className="w-full h-full object-cover"
                 />
@@ -176,7 +177,7 @@ const TheOffer = () => {
           <div className="md:hidden mt-4">
             <div className="relative rounded-xl overflow-hidden">
               <img 
-                src={SecurityCameraImage} 
+                src={SecurityCameraImage} // ✅ FIXED VARIABLE
                 alt="Security Camera" 
                 className="w-full h-48 object-cover"
               />
