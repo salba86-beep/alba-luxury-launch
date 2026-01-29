@@ -176,7 +176,7 @@ const TheOffer = () => {
           <div className="md:hidden mt-4">
             <div className="relative rounded-xl overflow-hidden">
               <img 
-                src={smartLockImage} 
+                src={SecurityCameraImage} 
                 alt="Security Camera" 
                 className="w-full h-48 object-cover"
               />
