@@ -144,8 +144,12 @@ const IncomeCalculator = () => {
                     <PoundSterling className="w-5 h-5 text-primary" />
                   </div>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl md:text-5xl font-heading font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                      £{currentData.monthly[0].toLocaleString()}–£{currentData.monthly[1].toLocaleString()}
+                    <span className="text-4xl md:text-5xl font-heading font-bold text-primary">
+                      £{currentData.monthly[0].toLocaleString()}
+                    </span>
+                    <span className="text-4xl md:text-5xl font-heading font-bold text-primary">–</span>
+                    <span className="text-4xl md:text-5xl font-heading font-bold text-primary">
+                      £{currentData.monthly[1].toLocaleString()}
                     </span>
                     <span className="text-muted-foreground text-sm">/month</span>
                   </div>
@@ -168,8 +172,12 @@ const IncomeCalculator = () => {
                     <TrendingUp className="w-5 h-5 text-accent" />
                   </div>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl md:text-5xl font-heading font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                      £{currentData.annual[0].toLocaleString()}–£{currentData.annual[1].toLocaleString()}
+                    <span className="text-4xl md:text-5xl font-heading font-bold text-primary">
+                      £{currentData.annual[0].toLocaleString()}
+                    </span>
+                    <span className="text-4xl md:text-5xl font-heading font-bold text-primary">–</span>
+                    <span className="text-4xl md:text-5xl font-heading font-bold text-primary">
+                      £{currentData.annual[1].toLocaleString()}
                     </span>
                     <span className="text-primary-foreground/70 text-sm">/year</span>
                   </div>
