@@ -1,37 +1,30 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
+
 const IncomeComparison = () => {
-  return <section className="section-padding bg-background opacity-85">
+  return (
+    <section className="section-padding bg-card">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.5
-      }} className="text-center mb-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
             Short-Term Vs Longer Lets
           </h2>
         </motion.div>
 
-        <motion.div initial={{
-        opacity: 0,
-        y: 30
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.6,
-        delay: 0.1
-      }} className="max-w-4xl mx-auto mb-10">
-          <div className="text-muted-foreground space-y-4 leading-relaxed">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="max-w-4xl mx-auto mb-12"
+        >
+          <div className="text-muted-foreground space-y-6 leading-relaxed">
             <p>
               The North West and North Wales remain a strong short-term market. A mix of leisure and business demand, beautiful countryside, and vibrant cities attracts millions of visitors and contractors each year.
             </p>
@@ -47,88 +40,75 @@ const IncomeComparison = () => {
           </div>
         </motion.div>
 
-        <motion.div initial={{
-        opacity: 0,
-        y: 30
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.6,
-        delay: 0.2
-      }} className="max-w-4xl mx-auto">
-          <p className="text-foreground mb-6 text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-4xl mx-auto"
+        >
+          <p className="text-foreground mb-8 text-center">
             The example below, is a comparison from a Traditional Let Vs Short Let / Airbnb. The data reflected are based on 2 bedroom house/apt. in Chester Area rented for £1,200.00 pm.
           </p>
 
           {/* Comparison Table */}
-          <div className="overflow-x-auto rounded-xl shadow-luxury border border-border/50">
+          <div className="overflow-x-auto border border-border">
             <table className="w-full">
-              {/* Header Row */}
               <thead>
                 <tr>
-                  <th className="bg-primary text-primary-foreground font-heading font-semibold px-6 py-4 text-left">
+                  <th className="bg-primary text-primary-foreground font-heading font-bold px-6 py-5 text-left text-sm uppercase tracking-wide">
                     
                   </th>
-                  <th className="bg-muted text-foreground font-heading font-semibold px-6 py-4 text-center">
+                  <th className="bg-muted text-foreground font-heading font-bold px-6 py-5 text-center text-sm uppercase tracking-wide">
                     Traditional Let
                   </th>
-                  <th className="bg-accent text-accent-foreground font-heading font-semibold px-6 py-4 text-center">
+                  <th className="bg-accent text-accent-foreground font-heading font-bold px-6 py-5 text-center text-sm uppercase tracking-wide">
                     Short Let / Airbnb
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {/* Monthly Income */}
-                <tr>
-                  <td className="bg-primary/90 text-primary-foreground font-medium px-6 py-3">
+                <tr className="border-t border-border">
+                  <td className="bg-primary/90 text-primary-foreground font-medium px-6 py-4 text-sm">
                     Monthly income from Rent
                   </td>
-                  <td className="bg-muted/50 text-foreground text-center px-6 py-3 font-medium">
+                  <td className="bg-muted/50 text-foreground text-center px-6 py-4 font-medium">
                     £1,200.00
                   </td>
-                  <td className="bg-accent/20 text-foreground text-center px-6 py-3 font-medium">
+                  <td className="bg-accent/20 text-foreground text-center px-6 py-4 font-medium">
                     £2,340.00
                   </td>
                 </tr>
-
-                {/* Monthly Expenses */}
-                <tr>
-                  <td className="bg-primary/90 text-primary-foreground px-6 py-3">
+                <tr className="border-t border-border">
+                  <td className="bg-primary/90 text-primary-foreground px-6 py-4 text-sm">
                     Monthly expenses (i.e. Mortgage)
                   </td>
-                  <td className="bg-muted/50 text-foreground text-center px-6 py-3">
+                  <td className="bg-muted/50 text-foreground text-center px-6 py-4">
                     £600.00
                   </td>
-                  <td className="bg-accent/20 text-foreground text-center px-6 py-3">
+                  <td className="bg-accent/20 text-foreground text-center px-6 py-4">
                     £600.00
                   </td>
                 </tr>
-
-                {/* Agent Fees */}
-                <tr>
-                  <td className="bg-primary/90 text-primary-foreground px-6 py-3">
+                <tr className="border-t border-border">
+                  <td className="bg-primary/90 text-primary-foreground px-6 py-4 text-sm">
                     Agent Fee's
                   </td>
-                  <td className="bg-muted/50 text-foreground text-center px-6 py-3">
+                  <td className="bg-muted/50 text-foreground text-center px-6 py-4">
                     £120.00 (10%)
                   </td>
-                  <td className="bg-accent/20 text-foreground text-center px-6 py-3">
+                  <td className="bg-accent/20 text-foreground text-center px-6 py-4">
                     £315.90 (13.5%)
                   </td>
                 </tr>
-
-                {/* Total Monthly Net Income */}
-                <tr>
-                  <td className="bg-primary text-primary-foreground font-semibold px-6 py-4">
+                <tr className="border-t border-border">
+                  <td className="bg-primary text-primary-foreground font-bold px-6 py-5 text-sm uppercase tracking-wide">
                     Total monthly Net income
                   </td>
-                  <td className="bg-muted text-foreground text-center px-6 py-4 font-bold text-lg">
+                  <td className="bg-muted text-foreground text-center px-6 py-5 font-bold text-xl">
                     £480.00
                   </td>
-                  <td className="bg-accent text-accent-foreground text-center px-6 py-4 font-bold text-lg">
+                  <td className="bg-accent text-accent-foreground text-center px-6 py-5 font-bold text-xl">
                     £1,424.10
                   </td>
                 </tr>
@@ -136,39 +116,35 @@ const IncomeComparison = () => {
             </table>
           </div>
 
-          {/* Note */}
-          <motion.p initial={{
-          opacity: 0
-        }} whileInView={{
-          opacity: 1
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.5,
-          delay: 0.4
-        }} className="text-muted-foreground italic text-center mt-6 text-sm">
+          <motion.p 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-muted-foreground italic text-center mt-8 text-sm"
+          >
             Note: The income comparison above is an example & the Agent Fees are based on the current fee offer.
           </motion.p>
 
-          {/* CTA Button */}
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.5,
-          delay: 0.5
-        }} className="text-center mt-8">
-            <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-heading font-semibold px-8 py-6 text-lg">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="text-center mt-10"
+          >
+            <Button 
+              asChild 
+              variant="outline" 
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-heading font-bold px-10 py-6 text-sm uppercase tracking-wide"
+            >
               <a href="#valuation">Get Started Here</a>
             </Button>
           </motion.div>
         </motion.div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default IncomeComparison;

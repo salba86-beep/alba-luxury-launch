@@ -10,20 +10,13 @@ import EasySteps from "@/components/EasySteps";
 import RiskReversal from "@/components/RiskReversal";
 import AboutUs from "@/components/AboutUs";
 import Footer from "@/components/Footer";
-import pageBackground from "@/assets/page-background.jpg";
 
 const Index = () => {
   return (
-    <div 
-      className="min-h-screen bg-background"
-      style={{
-        backgroundImage: `url(${pageBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
+    <div className="min-h-screen bg-background">
+      {/* Noise Overlay */}
+      <div className="noise-overlay" />
+      
       <Header />
       <main>
         <Hero />

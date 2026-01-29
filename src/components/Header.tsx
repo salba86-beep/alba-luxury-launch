@@ -6,34 +6,34 @@ const Header = () => {
     <motion.header
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
           <a href="#" className="flex items-center">
             <img 
               src={salbaLogo} 
               alt="SALBA Property Management" 
-              className="h-14 md:h-16 w-auto"
+              className="h-12 md:h-14 w-auto"
             />
           </a>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-12">
             <a
               href="#about"
-              className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+              className="text-foreground/70 hover:text-foreground transition-colors font-medium text-sm tracking-wide uppercase"
             >
               About
             </a>
             <a
               href="#services"
-              className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+              className="text-foreground/70 hover:text-foreground transition-colors font-medium text-sm tracking-wide uppercase"
             >
               Services
             </a>
             <a
               href="#guarantee"
-              className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+              className="text-foreground/70 hover:text-foreground transition-colors font-medium text-sm tracking-wide uppercase"
             >
               Guarantee
             </a>
@@ -41,7 +41,7 @@ const Header = () => {
 
           <a
             href="#valuation"
-            className="inline-flex items-center justify-center px-5 py-2.5 bg-primary hover:bg-gold-dark text-primary-foreground font-heading font-semibold text-sm rounded transition-all duration-300 shadow-sm hover:shadow-gold"
+            className="brutalist-btn text-xs md:text-sm"
           >
             Free Valuation
           </a>
