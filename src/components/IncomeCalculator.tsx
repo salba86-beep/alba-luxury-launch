@@ -143,45 +143,37 @@ const IncomeCalculator = () => {
                     <span className="text-muted-foreground text-sm font-medium">Monthly Income</span>
                     <PoundSterling className="w-5 h-5 text-primary" />
                   </div>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-4xl md:text-5xl font-heading font-bold text-primary">
-                      £{currentData.monthly[0].toLocaleString()}
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl md:text-4xl font-heading font-bold text-primary">
+                      £{currentData.monthly[0].toLocaleString()}–£{currentData.monthly[1].toLocaleString()}
                     </span>
-                    <span className="text-4xl md:text-5xl font-heading font-bold text-primary">–</span>
-                    <span className="text-4xl md:text-5xl font-heading font-bold text-primary">
-                      £{currentData.monthly[1].toLocaleString()}
-                    </span>
-                    <span className="text-muted-foreground text-sm">/month</span>
+                    <span className="text-muted-foreground text-sm self-end">/month</span>
                   </div>
                   <p className="text-muted-foreground text-xs mt-2">
                     Potential monthly revenue based on local market data
                   </p>
                 </motion.div>
 
-                {/* Annual Income */}
+                {/* Annual Income (stacked) */}
                 <motion.div
                   key={`${selectedArea}-${selectedBedrooms}-annual`}
                   whileHover={{ scale: 1.03, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: 0.1 }}
-                  className="bg-gradient-to-br from-primary to-primary/80 rounded-xl p-6 shadow-lg cursor-pointer"
+                  className="bg-gradient-to-br from-primary to-primary/80 rounded-xl p-6 shadow-lg cursor-pointer text-white"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-primary-foreground/80 text-sm font-medium">Annual Revenue</span>
+                    <span className="text-sm font-medium">Annual Revenue</span>
                     <TrendingUp className="w-5 h-5 text-accent" />
                   </div>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-4xl md:text-5xl font-heading font-bold text-primary">
-                      £{currentData.annual[0].toLocaleString()}
-                    </span>
-                    <span className="text-4xl md:text-5xl font-heading font-bold text-primary">–</span>
-                    <span className="text-4xl md:text-5xl font-heading font-bold text-primary">
-                      £{currentData.annual[1].toLocaleString()}
-                    </span>
-                    <span className="text-primary-foreground/70 text-sm">/year</span>
+                  <div className="flex flex-col gap-1 text-4xl md:text-5xl font-heading font-bold">
+                    <span>£{currentData.annual[0].toLocaleString()}</span>
+                    <span>–</span>
+                    <span>£{currentData.annual[1].toLocaleString()}</span>
+                    <span className="text-sm font-normal text-white/70">/year</span>
                   </div>
-                  <p className="text-primary-foreground/70 text-xs mt-2">
+                  <p className="text-white/70 text-xs mt-2">
                     Potential annual earnings with short-term lets
                   </p>
                 </motion.div>
@@ -205,9 +197,10 @@ const IncomeCalculator = () => {
                       heroSection.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
-                  className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
+                  className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg
+                             hover:ring-2 hover:ring-gold hover:ring-offset-1 hover:ring-offset-background"
                 >
-                  Get Your Free Valuation
+                  Get Your Estimate Now
                   <TrendingUp className="w-4 h-4" />
                 </button>
               </motion.div>
