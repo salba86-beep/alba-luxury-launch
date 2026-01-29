@@ -28,6 +28,7 @@ const LeadForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // In production, this would send to a backend
     setIsSubmitted(true);
   };
 
@@ -70,15 +71,13 @@ const LeadForm = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-card p-10 border border-border text-center"
+        className="bg-card rounded-lg p-8 shadow-luxury-lg border border-border/50 text-center"
       >
-        <div className="flex justify-center mb-6">
-          <div className="w-20 h-20 bg-primary flex items-center justify-center">
-            <CheckCircle className="w-10 h-10 text-primary-foreground" />
-          </div>
+        <div className="flex justify-center mb-4">
+          <CheckCircle className="w-16 h-16 text-primary" />
         </div>
-        <h3 className="font-heading text-xl font-bold text-foreground mb-3 uppercase tracking-wide">
-          Thank You
+        <h3 className="font-heading text-2xl font-bold text-foreground mb-2">
+          Thank You!
         </h3>
         <p className="text-muted-foreground">
           We'll send your free Airbnb income valuation within 24 hours.
@@ -93,23 +92,23 @@ const LeadForm = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
-      className="bg-card p-8 md:p-10 border border-border"
+      className="bg-card rounded-lg p-6 md:p-8 shadow-luxury-lg border border-border/50"
     >
-      <div className="text-center mb-8">
-        <span className="inline-block px-4 py-2 border border-primary text-primary text-xs font-heading tracking-widest uppercase mb-4">
+      <div className="text-center mb-6">
+        <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
           Free Valuation
         </span>
-        <h3 className="font-heading text-lg md:text-xl font-bold text-foreground uppercase tracking-wide">
+        <h3 className="font-heading text-xl md:text-2xl font-bold text-foreground">
           Get Your Airbnb Income Estimate
         </h3>
-        <p className="text-muted-foreground text-sm mt-3">
+        <p className="text-muted-foreground text-sm mt-2">
           Discover how much more you could earn in just 60 seconds
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-5">
+      <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <Label htmlFor="name" className="text-foreground font-medium text-sm uppercase tracking-wide">
+          <Label htmlFor="name" className="text-foreground font-medium">
             Full Name <span className="text-destructive">*</span>
           </Label>
           <Input
@@ -120,12 +119,12 @@ const LeadForm = () => {
             required
             value={formData.name}
             onChange={handleChange}
-            className="mt-2 bg-background border-border focus:ring-primary focus:border-primary"
+            className="mt-1.5 bg-background border-border focus:ring-primary focus:border-primary"
           />
         </div>
 
         <div>
-          <Label htmlFor="email" className="text-foreground font-medium text-sm uppercase tracking-wide">
+          <Label htmlFor="email" className="text-foreground font-medium">
             Email Address <span className="text-destructive">*</span>
           </Label>
           <Input
@@ -136,12 +135,12 @@ const LeadForm = () => {
             required
             value={formData.email}
             onChange={handleChange}
-            className="mt-2 bg-background border-border focus:ring-primary focus:border-primary"
+            className="mt-1.5 bg-background border-border focus:ring-primary focus:border-primary"
           />
         </div>
 
         <div>
-          <Label htmlFor="phone" className="text-foreground font-medium text-sm uppercase tracking-wide">
+          <Label htmlFor="phone" className="text-foreground font-medium">
             Phone Number <span className="text-destructive">*</span>
           </Label>
           <Input
@@ -152,12 +151,12 @@ const LeadForm = () => {
             required
             value={formData.phone}
             onChange={handleChange}
-            className="mt-2 bg-background border-border focus:ring-primary focus:border-primary"
+            className="mt-1.5 bg-background border-border focus:ring-primary focus:border-primary"
           />
         </div>
 
         <div>
-          <Label htmlFor="postcode" className="text-foreground font-medium text-sm uppercase tracking-wide">
+          <Label htmlFor="postcode" className="text-foreground font-medium">
             Property Postcode <span className="text-destructive">*</span>
           </Label>
           <Input
@@ -168,22 +167,22 @@ const LeadForm = () => {
             required
             value={formData.postcode}
             onChange={handleChange}
-            className="mt-2 bg-background border-border focus:ring-primary focus:border-primary"
+            className="mt-1.5 bg-background border-border focus:ring-primary focus:border-primary"
           />
         </div>
 
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <Label htmlFor="beds" className="text-foreground font-medium text-sm uppercase tracking-wide">
-              Beds <span className="text-destructive">*</span>
+            <Label htmlFor="beds" className="text-foreground font-medium">
+              Number of Beds <span className="text-destructive">*</span>
             </Label>
             <Select
               value={formData.beds}
               onValueChange={(value) => handleSelectChange("beds", value)}
               required
             >
-              <SelectTrigger className="mt-2 bg-background border-border">
-                <SelectValue placeholder="Select" />
+              <SelectTrigger className="mt-1.5 bg-background border-border">
+                <SelectValue placeholder="Select beds" />
               </SelectTrigger>
               <SelectContent className="bg-background border-border z-50">
                 {[...Array(10)].map((_, i) => (
@@ -196,16 +195,16 @@ const LeadForm = () => {
           </div>
 
           <div>
-            <Label htmlFor="bathrooms" className="text-foreground font-medium text-sm uppercase tracking-wide">
-              Bathrooms <span className="text-destructive">*</span>
+            <Label htmlFor="bathrooms" className="text-foreground font-medium">
+              Number of Bathrooms <span className="text-destructive">*</span>
             </Label>
             <Select
               value={formData.bathrooms}
               onValueChange={(value) => handleSelectChange("bathrooms", value)}
               required
             >
-              <SelectTrigger className="mt-2 bg-background border-border">
-                <SelectValue placeholder="Select" />
+              <SelectTrigger className="mt-1.5 bg-background border-border">
+                <SelectValue placeholder="Select bathrooms" />
               </SelectTrigger>
               <SelectContent className="bg-background border-border z-50">
                 {[...Array(10)].map((_, i) => (
@@ -219,31 +218,31 @@ const LeadForm = () => {
         </div>
 
         <div>
-          <Label className="text-foreground font-medium text-sm uppercase tracking-wide">
+          <Label className="text-foreground font-medium">
             Property Photo <span className="text-destructive">*</span>
           </Label>
-          <div className="mt-2">
+          <div className="mt-1.5">
             {imagePreview ? (
               <div className="relative">
                 <img
                   src={imagePreview}
                   alt="Property preview"
-                  className="w-full h-32 object-cover border border-border"
+                  className="w-full h-32 object-cover rounded-lg border border-border"
                 />
                 <button
                   type="button"
                   onClick={removeImage}
-                  className="absolute top-2 right-2 bg-destructive text-destructive-foreground p-1 hover:bg-destructive/80 transition-colors"
+                  className="absolute top-2 right-2 bg-destructive text-destructive-foreground rounded-full p-1 hover:bg-destructive/80 transition-colors"
                 >
                   <X className="w-4 h-4" />
                 </button>
               </div>
             ) : (
-              <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-border cursor-pointer bg-background hover:bg-muted/50 transition-colors">
-                <div className="flex flex-col items-center justify-center py-4">
+              <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-border rounded-lg cursor-pointer bg-background hover:bg-muted/50 transition-colors">
+                <div className="flex flex-col items-center justify-center pt-5 pb-6">
                   <Upload className="w-8 h-8 text-muted-foreground mb-2" />
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide">
-                    Upload photo
+                  <p className="text-sm text-muted-foreground">
+                    Click to upload property photo
                   </p>
                 </div>
                 <input
@@ -261,12 +260,12 @@ const LeadForm = () => {
 
         <Button
           type="submit"
-          className="w-full brutalist-btn py-6 text-sm"
+          className="w-full bg-primary hover:bg-gold-dark text-primary-foreground font-heading font-semibold py-6 text-lg shadow-gold transition-all duration-300 hover:shadow-lg"
         >
           Get My Free Valuation
         </Button>
 
-        <p className="text-center text-xs text-muted-foreground mt-4 uppercase tracking-wide">
+        <p className="text-center text-xs text-muted-foreground mt-3">
           No obligation. We respect your privacy.
         </p>
       </form>

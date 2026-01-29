@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Syncopate', 'sans-serif'],
-        sans: ['Manrope', 'sans-serif'],
+        heading: ['Montserrat', 'sans-serif'],
+        sans: ['Source Sans 3', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,18 +51,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        stone: {
-          DEFAULT: "hsl(var(--stone))",
-          light: "hsl(var(--stone-light))",
-          dark: "hsl(var(--stone-dark))",
-        },
-        moss: {
-          DEFAULT: "hsl(var(--moss))",
-          light: "hsl(var(--moss-light))",
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+          dark: "hsl(var(--gold-dark))",
         },
         charcoal: {
           DEFAULT: "hsl(var(--charcoal))",
           light: "hsl(var(--charcoal-light))",
+        },
+        cream: {
+          DEFAULT: "hsl(var(--cream))",
+          dark: "hsl(var(--cream-dark))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -77,13 +77,13 @@ export default {
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius))",
-        sm: "calc(var(--radius))",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        'brutal': 'var(--shadow-brutal)',
         'luxury': 'var(--shadow-md)',
         'luxury-lg': 'var(--shadow-lg)',
+        'gold': 'var(--shadow-gold)',
       },
       keyframes: {
         "accordion-down": {
