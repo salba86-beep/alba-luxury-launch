@@ -56,11 +56,11 @@ const IncomeCalculator = () => {
             Income Estimator
           </span>
 
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 inline-block px-3 py-1 rounded bg-white/20 backdrop-blur-sm">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 inline-block px-4 py-2 rounded bg-black/40 text-white backdrop-blur-md">
             Turn Your Property into a <span className="text-primary">High-Earning Short-Term Rental</span>
           </h2>
 
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto inline-block px-2 py-1 rounded bg-white/10 backdrop-blur-sm">
+          <p className="text-lg max-w-2xl mx-auto inline-block px-3 py-2 rounded bg-black/30 text-white/90 backdrop-blur-md">
             Select your area and property size to see your potential short-term rental revenue. Typical 2-bedroom apartments in Chester & Cheshire can earn <strong>£26,000–£30,000 per year</strong>.
           </p>
         </motion.div>
@@ -139,17 +139,17 @@ const IncomeCalculator = () => {
                   transition={{ duration: 0.3 }}
                   className="bg-card rounded-xl p-6 border border-border shadow-lg cursor-pointer"
                 >
-                  <div className="flex items-center justify-between mb-4 text-yellow-400">
-                    <span className="text-sm font-medium text-yellow-400">Monthly Income</span>
-                    <PoundSterling className="w-5 h-5 text-yellow-400" />
+                  <div className="flex items-center justify-between mb-4 monthly-gold">
+                    <span className="text-sm font-medium monthly-gold">Monthly Income</span>
+                    <PoundSterling className="w-5 h-5 monthly-gold" />
                   </div>
-                  <div className="flex flex-col gap-1 text-4xl md:text-5xl font-heading font-bold text-yellow-400">
+                  <div className="flex flex-col gap-1 text-4xl md:text-5xl font-heading font-bold monthly-gold">
                     <span>£{currentData.monthly[0].toLocaleString()}</span>
                     <span>–</span>
                     <span>£{currentData.monthly[1].toLocaleString()}</span>
-                    <span className="text-sm font-normal text-yellow-400">/month</span>
+                    <span className="text-sm font-normal monthly-gold">/month</span>
                   </div>
-                  <p className="text-sm mt-2 text-yellow-400">
+                  <p className="text-sm mt-2 monthly-gold">
                     Potential monthly revenue based on local market data
                   </p>
                 </motion.div>
