@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import albaLogo from "@/assets/alba-logo.png";
+import SalbaLogo from "@/assets/Salba-logo-5.png";
 
 const Header = () => {
   return (
@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center">
             <img 
-              src={albaLogo} 
+              src={SalbaLogo} 
               alt="SALBA Property Management" 
               className="h-14 md:h-16 w-auto"
             />
