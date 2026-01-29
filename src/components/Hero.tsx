@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import LeadForm from "./LeadForm";
 import heroImage from "@/assets/hero-background.jpg";
-import salbaLogo from "@/assets/salba-logo-gold.png";
+import salbaLogo from "@/assets/Salba-logo-5.png";
 const Hero = () => {
   return <section id="valuation" className="relative min-h-screen pt-20 md:pt-24">
       {/* Background Image with Overlay */}
