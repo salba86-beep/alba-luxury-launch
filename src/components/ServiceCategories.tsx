@@ -58,7 +58,7 @@ const ServiceCategories = () => {
                 <h3 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-4">
                   {category.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="leading-relaxed text-charcoal">
                   {category.description}
                 </p>
               </div>
