@@ -51,7 +51,7 @@ const ServiceCategories = () => {
           duration: 0.5,
           delay: 0.15 * index
         }} className="group">
-              <div className="bg-card rounded-xl p-8 h-full shadow-luxury border border-border/50 hover:shadow-luxury-lg transition-all duration-300 hover:-translate-y-2 text-center">
+              <div className="rounded-xl p-8 h-full shadow-luxury border border-border/50 hover:shadow-luxury-lg transition-all duration-300 hover:-translate-y-2 text-center bg-[sidebar-accent-foreground] bg-gray-200">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                   <category.icon className="w-10 h-10 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                 </div>
